@@ -1,36 +1,24 @@
-## Final Project for M202A
-
-Project Name:Smart Parking System Based on Machine Vision
-
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MenghuaXie/MenghuaXie/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Project Topic：Smart Parking System based on Machine Vision
+### Team Members
+* Yunhui Ma
+* Menghua Xie
+### Links
+[Repo](https://github.com/MenghuaXie/MenghuaXie)
+### Project Introduction
+#### Motivation
+* Finding parking spt can be time consuming especially during peak hours.
+* What if we can check which parking slot is available and notyify drivers to find it.
+#### Goal
+* Using Camera to check the parking spot.(CNN)
+* Creating a map that corresponding to the parking lot.
+* The system can manage the data and show the information which parking slots are available.
+* The information will be transferred to other device and tell users the available parking slots.
+#### Deliverable
+* Week4: Decide equipmet, research, programming language.
+* Week5: Apply Machine learning to recognize cars(Analysis which models can be used)
+* Week6: Testing image recongition, optimize the model
+* Week7: Create a map that correspond to the parking lot
+* Week8: Matching the available parking slot
+* Week9: Sending data to other device(mobile phone)
+* Week10: Demo, final presentation
+### Hardware Used in This Project
