@@ -90,7 +90,10 @@ loading image test:
 The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a look while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
-The information that we need to convey is ready after of during the prediction process. We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
+The information that we need to convey is ready after of during the prediction process. 
+这里写一下获取坐标部分的内容以及相关代码
+
+We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
 ```python
 from twilio.rest import Client
 account_sid = "ACbfe2ada64f41c41b0854e7b483735232"
@@ -104,6 +107,8 @@ message = client.messages.create(
     from_="+16516614003",
     body=content)
 ```
+Test result are shown here:
+
 ### Future Work
 
 ### Reference
