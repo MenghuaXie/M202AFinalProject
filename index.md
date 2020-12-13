@@ -40,8 +40,9 @@ Based on this, we decided to use yolov5 to complete subsequent projects, and use
 
 ##### Yolov5
 Yolov5 is very similar to Yolov4, and it is still divided into four parts: Input, Backbone, Neck, Prediction. It provides 4 models for training and prediction: Yolov5s,Yolov5m,Yolov5l and Yolov5x. The input of Yolov5 uses the same Mosaic data enhancement method as Yolov4.  
-In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because the constraints of hardware, we mainly use Yolov5s model for training and prediction.
+In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because the constraints of hardware, we mainly use Yolov5m model for training and prediction.
 The structure of Yolov5 and algorithm performance test chart are shown below.
+
 ![The structure of Yolov5](githubpageImages/图片1.png)  
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
 
@@ -65,21 +66,35 @@ For message sending and receiving based on twilio, we also need to install twili
 ##### Creating Training Data Set
 Normally, car position prediction requires a data set containing car images from various directions. In the beginning phase of our project, we mainly focus on cars’ top view images since  cameras are often set at above in most open air parking lot. Otherwise they are placed at a reasonable height in order to obtain a larger view of the parking lot. Admittedly, cars which are parked away from cameras would be recorded from another side and that will reduce the prediction accuracy of our model. But this a good bake off for the total situation.  
 As shown below, we collected 150 car top view images and use LabelImg to label out the cars. 
+
 ![training data set](githubpageImages/图片2.png)  
 ![training data set](githubpageImages/图片3.png)  
+After normalizing those pictures and randomly separate them into 2 groups at a ratio of 9:1 for training and verification. WE have the dataset available.
 
-##### Training Process
+##### Training Process and Result
+We train the date set for 300 epochs using yolov5m and get 2 weights, the best one and the last one.and we choose the best one for prediction. 
 
-##### Training Result
+![training](githubpageImages/123.png)  
+![training](githubpageImages/微信截图_20201214012328.png)  
+
+Estimated time for the training process is about 5 hours. (limited by the gpu, GeForce GTX 960M)  
+The training result is also shown below. As we can see the loss is getting smaller and smaller so the training result can meet our expectation.  
+![training](githubpageImages/56.png)  
 
 ##### Prediction Result
+We applied two ways to test the result: loading image test and using a camera. At the first stage, test image and video is the top view of a parking lot, with clearly marked parking spots. Individual test results are shown below.  
+Using camera to test:  
+![testing](githubpageImages/test1.png)  
+loading image test:   
+![testing](githubpageImages/test2.png)  
+![testing](githubpageImages/test3.png)  
 
 ##### Sending Message to the Phone 
 
 ### Future Work
 
 ### Reference
-https://github.com/ultralytics/yolov5
-https://www.tensorflow.org/tensorboard
-https://www.shutterstock.com/search/parking+lot+top+view
+https://github.com/ultralytics/yolov5  
+https://www.tensorflow.org/tensorboard  
+https://www.shutterstock.com/search/parking+lot+top+view  
 
