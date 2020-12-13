@@ -29,4 +29,8 @@
   * Week10: Demo, final presentation 
   
 ### Hardware Used in This Project 
-  * Camera, Arduino, mobile Phone, PC 
+  * Camera, Mobile Phone, PC 
+
+
+### Project Overview
+Generally speaking, to recognize parking spots, it is necessary to classify and train for both cars and parking spots for ensuring the accuracy of prediction. But in reality, the ways that people use to identify a parking spot in diferent parking lots are diverse. In some parking lots, the parking spots may be separated by clear lines, while in other parking lots, there is no conspicuous, clear physical sign for identification. 
