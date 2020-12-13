@@ -86,7 +86,7 @@ We applied two ways to test the result: loading image test and using a camera. A
 Using camera to test:  
 ![testing](githubpageImages/微信截图_20201214014730.png)  
 loading image test:   
-![testing](githubpageImages/微信截图_20201214014021.png)  
+![testing](githubpageImages/微信截图_20201214014905.png)  
 
 ##### Sending Message to the Phone 
 
