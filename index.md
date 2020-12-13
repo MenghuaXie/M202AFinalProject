@@ -42,7 +42,7 @@ Based on this, we decided to use yolov5 to complete subsequent projects, and use
 Yolov5 is very similar to Yolov4, and it is still divided into four parts: Input, Backbone, Neck, Prediction. It provides 4 models for training and prediction: Yolov5s,Yolov5m,Yolov5l and Yolov5x. The input of Yolov5 uses the same Mosaic data enhancement method as Yolov4.  
 In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because the constraints of hardware, we mainly use Yolov5s model for training and prediction.
 The structure of Yolov5 and algorithm performance test chart are shown below.
-![The structure of Yolov5](/gitbubpageImages/图片1.png)  
+![The structure of Yolov5](githubpageImages/图片1.png)  
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
 
 ### Set Up
@@ -65,5 +65,5 @@ For message sending and receiving based on twilio, we also need to install twili
 ### Creating Training Data Set
 Normally, car position prediction requires a data set containing car images from various directions. In the beginning phase of our project, we mainly focus on cars’ top view images since  cameras are often set at above in most open air parking lot. Otherwise they are placed at a reasonable height in order to obtain a larger view of the parking lot. Admittedly, cars which are parked away from cameras would be recorded from another side and that will reduce the prediction accuracy of our model. But this a good bake off for the total situation.  
 As shown below, we collected 150 car top view images and use LabelImg to label out the cars. 
-![]githubpageImages/图片2.png）  
-![]githubpageImages/图片3.png）
+![1]githubpageImages/图片2.png）  
+![2]githubpageImages/图片3.png）
