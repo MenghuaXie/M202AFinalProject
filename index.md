@@ -40,7 +40,7 @@ Based on this, we decided to use yolov5 to complete subsequent projects, and use
 
 ##### Yolov5
 Yolov5 is very similar to Yolov4, and it is still divided into four parts: Input, Backbone, Neck, Prediction. It provides 4 models for training and prediction: Yolov5s,Yolov5m,Yolov5l and Yolov5x. The input of Yolov5 uses the same Mosaic data enhancement method as Yolov4.  
-In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because the constraints of hardware, we mainly use Yolov5m model for training and prediction.
+In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because of the constraints of hardware, we mainly use Yolov5m model for training and prediction.
 The structure of Yolov5 and algorithm performance test chart are shown below.
 
 ![The structure of Yolov5](githubpageImages/图片1.png)  
@@ -72,7 +72,7 @@ As shown below, we collected 150 car top view images and use LabelImg to label o
 After normalizing those pictures and randomly separate them into 2 groups at a ratio of 9:1 for training and verification. WE have the dataset available.
 
 ##### Training Process and Result
-We train the date set for 300 epochs using yolov5m and get 2 weights, the best one and the last one.and we choose the best one for prediction. 
+We train the date set for 300 epochs using yolov5m and get 2 weights, the best one and the last one and we choose the best one for prediction. 
 
 ![training](githubpageImages/微信截图_20201214014523.png)  
 ![training](githubpageImages/微信截图_20201214012328.png)  
@@ -87,9 +87,23 @@ Using camera to test:
 ![testing](githubpageImages/微信截图_20201214014730.png)  
 loading image test:   
 ![testing](githubpageImages/微信截图_20201214014905.png)  
+The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a look while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
-
+The information that we need to convey is ready after of during the prediction process. We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
+```python
+from twilio.rest import Client
+account_sid = "ACbfe2ada64f41c41b0854e7b483735232"
+auth_token = "086d3a23a1336240b36926abb3572983"
+Spaces = 13
+Cars = 1
+client = Client(account_sid, auth_token)
+content = "There are 14 slots in total, " + str(Cars) + " of them occupied, " + str(Spaces) + " of them available." + ""
+message = client.messages.create(
+    to="+86xxxxxxxxxxx",
+    from_="+16516614003",
+    body=content)
+```
 ### Future Work
 
 ### Reference
