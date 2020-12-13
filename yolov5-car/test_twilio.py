@@ -22,20 +22,11 @@ def sendMessage():
     myLabel = Label(root, text=content)
     myLabel.pack()
     print(content)
-    account_sid = "ACf56c120a6cd8977b5d936fbd72c11f87"
-    auth_token = "fa1a9f2b1db7fb9b42eb164f631a7251"
+    account_sid = "xxxxxx"
+    auth_token = "xxxxx"
     client = Client(account_sid, auth_token)
-    message = client.messages.create(to="+14152037291", from_="、+14438430254", body=content)
+    message = client.messages.create(to="+xxxxxx", from_="、+xxxxxx", body=content)
 
-'''
-def send_text():
-    account_sid = "ACbfe2ada64f41c41b0854e7b483735232"
-    auth_token = "086d3a23a1336240b36926abb3572983"
-
-    client = Client(account_sid, auth_token)
-    content = "There are 14 slots in total, " + str(car_nums) + " of them occupied, " + str(spaces) + " of them available." + ""
-    message = client.messages.create(to="+8618290262011", from_="+16516614003", body=content)
-'''
 
 with open('cas_infor.txt', 'r') as f:
     data = f.readlines()
