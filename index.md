@@ -84,7 +84,7 @@ The training result is also shown below. As we can see the loss is getting small
 ##### Prediction Result
 We applied two ways to test the result: loading image test and using a camera. At the first stage, test image and video is the top view of a parking lot, with clearly marked parking spots. Individual test results are shown below.  
 Using camera to test:  
-![testing](githubpageImages/test1.png)  
+![testing](githubpageImages/微信截图_20201214014730.png)  
 loading image test:   
 ![testing](githubpageImages/微信截图_20201214014021.png)  
 
