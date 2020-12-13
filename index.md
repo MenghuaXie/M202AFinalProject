@@ -44,6 +44,7 @@ In the Yolo algorithm, for different data sets, there will be anchor boxes with 
 The structure of Yolov5 and algorithm performance test chart are shown below.
 
 ![The structure of Yolov5](githubpageImages/图片1.png)  
+
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
 
 ##### Set Up
@@ -86,8 +87,7 @@ We applied two ways to test the result: loading image test and using a camera. A
 Using camera to test:  
 ![testing](githubpageImages/test1.png)  
 loading image test:   
-![testing](githubpageImages/test2.png)  
-![testing](githubpageImages/test3.png)  
+![testing](githubpageImages/微信截图_20201214014021.png)  
 
 ##### Sending Message to the Phone 
 
