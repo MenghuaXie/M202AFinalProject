@@ -5,7 +5,7 @@
 ### Links
 * [Repo](https://github.com/MenghuaXie/M202AFinalProject) 
 * [Github Page](https://menghuaxie.github.io/M202AFinalProject/)
-* [Midterm_Presentaion](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
+* [Midterm Presentaion](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
 ### Project Introduction 
   
 #### Motivation 
@@ -13,7 +13,8 @@
   * Finding parking spot can be time consuming especially during peak hours. 
   * We know that a lot of indoor parking lots have sensors on each parking slot to detect whether a car is parking. The available parking slot would turn on a green LED light to notify driver. In addition, the indoor parking lots have monitor to tell drivers how many parking slots are available.
   * But the outdoor parking lots do not have this system. It is not accurate to use sensors to detect vehicles from outdoor because the sensor can be affected by a leaf or something else. Also, flashing a LED light from outdoor is not easy to see. Therefore, it would be useful to implement a camera to check the available parking slots
-  * Notify drivers the available parking slots especially during the peak time. 
+  * Notify drivers the available parking slots especially during the peak time.
+  
 #### Goal 
   * Using Camera to check the parking spot. (CNN)  
   * creating a map that corresponding to the parking lot. 
@@ -34,4 +35,5 @@
 
 
 ### Project Overview
-Generally speaking, to recognize parking spots, it is necessary to classify and train for both cars and parking spots for ensuring the accuracy of prediction. But in reality, the ways that people use to identify a parking spot in diferent parking lots are diverse. In some parking lots, the parking spots may be separated by clear lines, while in other parking lots, there is no conspicuous, clear physical sign for identification. 
+Generally speaking, to recognize parking spots, it is necessary to classify and train for both cars and parking spots for ensuring the accuracy of prediction. But in reality, the ways that people use to identify a parking spot in diferent parking lots are diverse. In some parking lots, the parking spots may be separated by clear lines, while in other parking lots, there is no conspicuous and clear physical sign for identification, which will greatly increase the complexity of the project. On this basis, we decided to focus on the most essential part of parking spot recognition---car recognition. If cars can be identified precisely, we can cross-compare the prediction result with the pre-loaded parking spot information, and then easily achieve our goal. Then, on this basis, we will notify the user with the parking space information by sending messages to their phones.
+Based on this, we decided to use yolov5 to complete subsequent projects, and use twilio to sned information from PC to the phone.
