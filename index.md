@@ -5,6 +5,7 @@
 ### Links
 * [Repo](https://github.com/MenghuaXie/M202AFinalProject) 
 * [Github Page](https://menghuaxie.github.io/M202AFinalProject/)
+* [Midterm_Presentaion](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
 ### Project Introduction 
   
 #### Motivation 
