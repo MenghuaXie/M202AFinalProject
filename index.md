@@ -65,5 +65,5 @@ For message sending and receiving based on twilio, we also need to install twili
 ### Creating Training Data Set
 Normally, car position prediction requires a data set containing car images from various directions. In the beginning phase of our project, we mainly focus on cars’ top view images since  cameras are often set at above in most open air parking lot. Otherwise they are placed at a reasonable height in order to obtain a larger view of the parking lot. Admittedly, cars which are parked away from cameras would be recorded from another side and that will reduce the prediction accuracy of our model. But this a good bake off for the total situation.  
 As shown below, we collected 150 car top view images and use LabelImg to label out the cars. 
-![]（githubpageImages/图片2.png）  
-![]（githubpageImages/图片3.png）
+![training data set](githubpageImages/图片2.png)  
+![training data set](githubpageImages/图片3.png)  
