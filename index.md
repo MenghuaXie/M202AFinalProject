@@ -101,7 +101,7 @@ The information that we need to convey is ready after of during the prediction p
 
 * Check their center points to see if they are inside the bounding boxes. The park_nums[0-13] array is used to recording whether the parking slots are occurred.  
 
-![Mapping](githubpageImages/QQ截图20201218122149.png)  
+![Mapping](githubpageImages/QQ截图2020.png)  
 
 * In this case, from the image, we can see that there 5 parking slots are empty. In the terminal, it is printing out the message showing that the first three, and second and third last parking slots are empty. The rest of parking slots are occurred. 0 represents the empty parking slots, and 1 represents the occurred parking slots.  
 There are total 9 cars and 5 spaces in this case.  
@@ -111,16 +111,16 @@ There are total 9 cars and 5 spaces in this case.
 We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
 ```python
 from twilio.rest import Client
-account_sid = "ACbfe2ada64f41c41b0854e7b483735232"
-auth_token = "086d3a23a1336240b36926abb3572983"
-Spaces = 13
-Cars = 1
-client = Client(account_sid, auth_token)
-content = "There are 14 slots in total, " + str(Cars) + " of them occupied, " + str(Spaces) + " of them available." + ""
-message = client.messages.create(
-    to="+86xxxxxxxxxxx",
-    from_="+16516614003",
-    body=content)
+def sendMessage():
+    spaces = 14 - cars_num
+    content = "Available parking slots are: " + str(empty_slots) + ". " + str(cars_num) + " of them occupied, " + str(spaces) + " of them available." + ""
+    myLabel = Label(root, text=content)
+    myLabel.pack()
+    print(content)
+    account_sid = "xxxxxx"
+    auth_token = "xxxxx"
+    client = Client(account_sid, auth_token)
+    message = client.messages.create(to="+xxxxxx", from_="、+xxxxxx", body=content)
 ```
 
 Also, we created a button to send a message to the phone after clicking the button. The prediction result will also be ready after the code starts running. Pressing the button will be like a request for getting information.  
