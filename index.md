@@ -139,7 +139,7 @@ Once the button is clicked, phone would receive a message including the parking 
 * Due to the limitation of camera, the edges of the image recorded by camera are curved, which would affect the prediction.
 * It would need a lot of time to create bounding boxes to achieve mapping on the larger scale of parking lots.
 * The system should work on the outdoor parking lots because the cameras will be equipped at the top of place to get the top view images. Each camera should be able to detect more than 100 parking slots, and it only needs few cameras to capture the whole parking lot.
-* Due to the higher performance of CNN model, it is affected by external factors.
+* Due to the higher performance of CNN model, it is hard to affect the system by external factors such as weather and shopping carts.
 * The system can provide useful message to people to find an available parking slot in large outdoor parking lot during the peak time. 
 
 ### Future Work
