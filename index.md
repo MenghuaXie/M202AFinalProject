@@ -13,7 +13,7 @@
 #### Motivation 
   
   * Finding parking spot can be time consuming especially during peak hours. 
-  * We know that a lot of indoor parking lots have sensors on each parking slot to detect whether a car is parking. The available parking slot would turn on a green LED light to notify driver. In addition, the indoor parking lots have monitor to tell drivers how many parking slots are available.
+  * We know that a lot of indoor parking lots have sensors on each parking slot to detect whether a car is parking. The available parking slot would turn on a green LED light to notify drivers. In addition, the indoor parking lots have monitor to tell drivers how many parking slots are available.
   * But the outdoor parking lots do not have this system. It is not accurate to use sensors to detect vehicles from outdoor because the sensor can be affected by a leaf or something else. Also, flashing a LED light from outdoor is not easy to see. Therefore, it would be useful to implement a camera to check the available parking slots
   * Notify drivers the available parking slots especially during the peak time.
   
@@ -89,7 +89,7 @@ Using camera to test:
 ![testing](githubpageImages/微信截图_20201214014730.png)  
 loading image test:   
 ![testing](githubpageImages/微信截图_20201214014905.png)  
-The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a loop while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
+The test result shows that our model can predict the position of cars quite precisely, and the result refreshes rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a loop while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
 The information that we need to convey is ready after or during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
