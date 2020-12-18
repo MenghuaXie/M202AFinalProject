@@ -89,7 +89,7 @@ Using camera to test:
 ![testing](githubpageImages/微信截图_20201214014730.png)  
 loading image test:   
 ![testing](githubpageImages/微信截图_20201214014905.png)  
-The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a look while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
+The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a loop while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
 The information that we need to convey is ready after or during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
