@@ -97,7 +97,7 @@ The information that we need to convey is ready after or during the prediction p
 
 ![Mapping](githubpageImages/QQ截图20201218131421.png)  
 
-* Inside the detect() function, when the algorithm detects the vehicle objects in the video. The vehicle pixel locations (x, y) are stored in the det. xyxy[] which is obtained from det object is the pixel location corresponding to each detected vehicle. Then, use these information to calculate the center point of each boxes.  
+* Inside the detect() function, when the algorithm detects the vehicle objects in the video. The vehicle pixel locations (x, y) are stored in the det. the data xyxy[], which is obtained from det object is the pixel location corresponding to each detected vehicle. Then, use these information to calculate the center point of each box.  
 
 ![Mapping](githubpageImages/QQ截图20201218131545.png)  
 
