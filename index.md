@@ -90,8 +90,12 @@ loading image test:
 The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a look while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
-The information that we need to convey is ready after of during the prediction process. 
-这里写一下获取坐标部分的内容以及相关代码
+The information that we need to convey is ready after of during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
+* In order to achieve mapping, we draw 14 bounding boxes in the 640x320 video recording camera view. Those 14 bounding boxes positions are fixed. Each boxes would have their own coordinate. Those bounding boxes would be used to match the parking slots to see whether a car is inside the bounding boxes.
+* Inside the detect() function, when the algorithm detects the vehicle objects in the video. The vehicle pixel locations (x, y) are stored in the det. xyxy[] which is obtained from det object is the pixel location corresponding to each detected vehicle. Then, use these information to calculate the center point of each boxes.
+* Check their center points to see if they are inside the bounding boxes. The park_nums[0-13] array is used to recording whether the parking slots are occurred.
+* In this case, from the image, we can see that there 5 parking slots are empty. In the terminal, it is printing out the message showing that the first three, and second and third last parking slots are empty. The rest of parking slots are occurred. 0 represents the empty parking slots, and 1 represents the occurred parking slots.  
+There are total 9 cars and 5 spaces in this case.  
 
 We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
 ```python
@@ -107,9 +111,23 @@ message = client.messages.create(
     from_="+16516614003",
     body=content)
 ```
-Test result are shown here:
+
+Also, we created a button to send a message to the phone after clicking the button. The prediction result will also be ready after the code starts running. Pressing the button will be like a request for getting information.  
+
+Test result are shown here:  
+Once the button is clicked, phone would receive a message including the parking space information.
+
+### Summary
+* In this project, it has good prediction on a smaller scale of parking lot such as the demo that we showed.
+* Testing on larger scale of parking lot would require a lot of images to train in order to get a good prediction result. It is time consuming on training the model. In addition, the training should include different angel of car view. In our project, the training data set only includes the top view of cars.
+* Due to the limitation of camera, the edges of the image recorded by camera are curved, which would affect the prediction.
+* It would need a lot of time to create bounding boxes to achieve mapping on the larger scale of parking lots.
+* The system should work on the outdoor parking lots because the cameras will be equipped at the top of place to get the top view images. Each camera should be able to detect more than 100 parking slots, and it only needs few cameras to capture the whole parking lot.
+* Due to the higher performance of CNN model, it is affected by external factors.
+* The system can provide useful message to people to find an available parking slot in large outdoor parking lot during the peak time. 
 
 ### Future Work
+
 
 ### Reference
 https://github.com/ultralytics/yolov5  
