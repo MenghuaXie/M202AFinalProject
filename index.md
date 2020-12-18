@@ -105,10 +105,10 @@ The information that we need to convey is ready after or during the prediction p
 
 ![Mapping](githubpageImages/QQ截图2020.png)  
 
-* In this case, from the image, we can see that there 5 parking slots are empty. In the terminal, it is printing out the message showing that the first three, and second and third last parking slots are empty. The rest of parking slots are occurred. 0 represents the empty parking slots, and 1 represents the occurred parking slots.  
+* In this case, from the image, we can see that there are 5 parking slots empty. In the terminal, it is printing out the message showing that the first three, and second and third last parking slots are empty. The rest of parking slots are occurred. 0 represents the empty parking slots, and 1 represents the occurred parking slots.  
 There are total 9 cars and 5 spaces in this case.  
 
-![Mapping](githubpageImages/QQ截图20201218122258.png)
+![Mapping](githubpageImages/QQ截图20201218122258.png) 
 
 We will use twilio to get a free trail phone number and perform the function of sending message. Here is the code used in this part：  
 ```python
