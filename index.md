@@ -44,9 +44,9 @@ In the Yolo algorithm, for different data sets, there will be anchor boxes with 
 The structure of Yolov5 and algorithm performance test chart are shown below.
 
 ![The structure of Yolov5](githubpageImages/图片1.png)  
-
+(reference: https://blog.csdn.net/nan355655600/article/details/107852353)
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
-
+(reference: https://github.com/ultralytics/yolov5)
 ##### Set Up
 We use anaconda to setup a virtual environment with different libraries for python development.
 For training and prediction based on yolov5, the required libraries are listed here:  
@@ -127,7 +127,8 @@ Also, we created a button to send a message to the phone after clicking the butt
 ![Mapping](githubpageImages/button.png)  
 
 Test result are shown here:  
-Once the button is clicked, phone would receive a message including the parking space information.
+Once the button is clicked, phone would receive a message including the parking space information.  
+
 ![Mapping](githubpageImages/QQ截图20201218123032.png)  
 
 ### Summary
@@ -146,4 +147,4 @@ Once the button is clicked, phone would receive a message including the parking 
 https://github.com/ultralytics/yolov5  
 https://www.tensorflow.org/tensorboard  
 https://www.shutterstock.com/search/parking+lot+top+view  
-
+https://blog.csdn.net/nan355655600/article/details/107852353
