@@ -1,14 +1,17 @@
-## Project Topic：Smart Parking System based on Computer Vision
+## Project Topic：Smart Parking System based on Computer Vision  
+
 ### Team Members
 * Yunhui Ma
-* Menghua Xie
+* Menghua Xie  
+
 ### Links
 * [Repo](https://github.com/MenghuaXie/M202AFinalProject) 
 * [Github Page](https://menghuaxie.github.io/M202AFinalProject/)
 * [Midterm Presentation](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
 * [Final Presentation]()
 * [Index.md](https://github.com/MenghuaXie/M202AFinalProject/blob/gh-pages/index.md)
-* [weights](https://drive.google.com/drive/folders/1qTghqixWBGrEUCw9fJAiQDMfKWvJVWEy?usp=sharing)
+* [weights](https://drive.google.com/drive/folders/1qTghqixWBGrEUCw9fJAiQDMfKWvJVWEy?usp=sharing)  
+
 ### Project Introduction 
   
 #### Motivation 
@@ -49,7 +52,8 @@ The structure of Yolov5 and algorithm performance test chart are shown below.
 ![The structure of Yolov5](githubpageImages/图片1.png)  
 (reference: https://blog.csdn.net/nan355655600/article/details/107852353)
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
-(reference: https://github.com/ultralytics/yolov5)
+(reference: https://github.com/ultralytics/yolov5)  
+
 #### Set Up
 We use anaconda to setup a virtual environment with different libraries for python development.
 For training and prediction based on yolov5, the required libraries are listed here:  
