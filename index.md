@@ -49,7 +49,7 @@ The structure of Yolov5 and algorithm performance test chart are shown below.
 (reference: https://blog.csdn.net/nan355655600/article/details/107852353)
 ![Algorithm performance test chart](githubpageImages/20200806235330583.png)  
 (reference: https://github.com/ultralytics/yolov5)
-##### Set Up
+#### Set Up
 We use anaconda to setup a virtual environment with different libraries for python development.
 For training and prediction based on yolov5, the required libraries are listed here:  
 Cython  
@@ -66,14 +66,14 @@ tqdm
 pycocotools>=2.0  
 For message sending and receiving based on twilio, we also need to install twilio library.
 
-##### Creating Training Data Set
+#### Creating Training Data Set
 Normally, car position prediction requires a data set containing car images from various directions. In the beginning phase of our project, we mainly focus on cars’ top view images since  cameras are often set at above in most open air parking lot. Otherwise they are placed at a reasonable height in order to obtain a larger view of the parking lot. Admittedly, cars which are parked away from cameras would be recorded from another side and that will reduce the prediction accuracy of our model. But this a good bake off for the total situation.  
 As shown below, we collected 150 car top view images and use LabelImg to label out the cars. 
 
 ![training data set](githubpageImages/微信截图_20201214014443.png)  
 After normalizing those pictures and randomly separate them into 2 groups at a ratio of 9:1 for training and verification, we have the dataset available.
 
-##### Training Process and Result
+#### Training Process and Result
 We train the date set for 300 epochs using yolov5m and get 2 weights, the best one and the last one and we choose the best one for prediction. 
 
 ![training](githubpageImages/微信截图_20201214014523.png)  
@@ -83,7 +83,7 @@ Estimated time for the training process is about 5 hours. (limited by the gpu, G
 The training result is also shown below. As we can see the loss is getting smaller and smaller so the training result can meet our expectation.  
 ![training](githubpageImages/56.png)  
 
-##### Prediction Result
+#### Prediction Result
 We applied two ways to test the result: loading image test and using a camera. At the first stage, test image and video is the top view of a parking lot, with clearly marked parking spots. Individual test results are shown below.  
 Using camera to test:  
 ![testing](githubpageImages/微信截图_20201214014730.png)  
@@ -91,7 +91,7 @@ loading image test:
 ![testing](githubpageImages/微信截图_20201214014905.png)  
 The test result shows that our model can predict the position of cars quite precisely, and the result refreshes rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a loop while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
-##### Sending Message to the Phone 
+#### Sending Message to the Phone 
 The information that we need to convey is ready after or during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
 * In order to achieve mapping, we draw 14 bounding boxes in the 640x320 video recording camera view. Those 14 bounding boxes positions are fixed. Each boxes would have their own coordinate. Those bounding boxes would be used to match the parking slots to see whether a car is inside the bounding boxes.
 
