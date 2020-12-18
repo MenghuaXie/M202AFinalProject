@@ -5,7 +5,9 @@
 ### Links
 * [Repo](https://github.com/MenghuaXie/M202AFinalProject) 
 * [Github Page](https://menghuaxie.github.io/M202AFinalProject/)
-* [Midterm Presentaion](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
+* [Midterm Presentation](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
+* [Final Presentation]()
+* [Index.md](https://github.com/MenghuaXie/M202AFinalProject/blob/gh-pages/index.md)
 ### Project Introduction 
   
 #### Motivation 
@@ -90,7 +92,7 @@ loading image test:
 The test result shows that our model can predict the position of cars quite precisely, and the result refreshs rapidly in the camera test. It means we are able to obtain real time data of cars' position and provide feedback to users in the form of sending message. The prediction code works in a look while using camera for testing, so, in this case, a message sending button will be needed to control when will the message be sent.
 
 ##### Sending Message to the Phone 
-The information that we need to convey is ready after of during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
+The information that we need to convey is ready after or during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
 * In order to achieve mapping, we draw 14 bounding boxes in the 640x320 video recording camera view. Those 14 bounding boxes positions are fixed. Each boxes would have their own coordinate. Those bounding boxes would be used to match the parking slots to see whether a car is inside the bounding boxes.
 
 ![Mapping](githubpageImages/微信截图_20201217040332.png)  
@@ -141,7 +143,8 @@ Once the button is clicked, phone would receive a message including the parking 
 * The system can provide useful message to people to find an available parking slot in large outdoor parking lot during the peak time. 
 
 ### Future Work
-
+* To make this project suitable for more situations, we might need to train a model with a much larger and complete data set.
+* Creating a map before sending results is not realy an efficient method. We will try to find a better method to identify parking spots.
 
 ### Reference
 https://github.com/ultralytics/yolov5  
