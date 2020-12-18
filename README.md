@@ -1,4 +1,4 @@
-## Project Topic：Smart Parking System based on Machine Vision
+## Project Topic：Smart Parking System based on Computer Vision
 ### Team Members
 * Yunhui Ma
 * Menghua Xie
