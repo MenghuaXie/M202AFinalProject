@@ -20,7 +20,7 @@
 #### Goal 
   * Using Camera to check the parking spot. (CNN)  
   * creating a map that corresponding to the parking lot. 
-  * The system can manage the data and show the imformation which parking slots are available. 
+  * The system can manage the data and show the information which parking slots are available. 
   * The information will be transferred to other device and tell users the available parking slots. 
   
 #### Deliverable 
@@ -38,11 +38,11 @@
 
 ### Project Overview
 Generally speaking, to recognize parking spots, it is necessary to classify and train for both cars and parking spots if we want to ensure the accuracy of prediction. But in reality, the ways that people use to identify a parking spot in different parking lots are diverse. In some parking lots, the parking spots may be separated by clear lines, while in other parking lots, there is no conspicuous and clear physical sign for identification, which will greatly increase the complexity of the project. On this basis, we decided to focus on the most essential part of parking spot recognition---car recognition. If cars can be identified precisely, we can cross-compare the prediction result with the pre-loaded parking spot information, and then easily achieve our goal. Then, on this basis, we will notify the user with the parking space information by sending messages to their phones.  
-Based on this, we decided to use yolov5 to complete subsequent projects, and use twilio to sned information from PC to the phone.
+Based on this, we decided to use yolov5 to complete subsequent projects, and use twilio to send information from PC to the phone.
 
 ##### Yolov5
 Yolov5 is very similar to Yolov4, and it is still divided into four parts: Input, Backbone, Neck, Prediction. It provides 4 models for training and prediction: Yolov5s,Yolov5m,Yolov5l and Yolov5x. The input of Yolov5 uses the same Mosaic data enhancement method as Yolov4.  
-In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the groundtruth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This argorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because of the constraints of hardware, we mainly use Yolov5m model for training and prediction.
+In the Yolo algorithm, for different data sets, there will be anchor boxes with initial length and width. In network training, the network outputs the prediction frame based on the initial anchor frame, and then compares it with the ground truth of the real frame, calculates the gap between the two, and then reverses the update to iterate the network parameters. This algorithm can provide a rather precise prediction when it comes to small targets in a high resolution image, which is a big improvement compared with its previous versions. In our project, because of the constraints of hardware, we mainly use Yolov5m model for training and prediction.
 The structure of Yolov5 and algorithm performance test chart are shown below.
 
 ![The structure of Yolov5](githubpageImages/图片1.png)  
