@@ -95,11 +95,11 @@ The test result shows that our model can predict the position of cars quite prec
 The information that we need to convey is ready after or during the prediction process. As mentioned earlier, we need to create a map and compare it with the prediction result to  check whether parking slots are empty. It is difficult to find a recording video in the public parking lot. In order to simulate the project, we just use 4 images including 14 parking slots and some vehicles in different locations. Following is how we match the prediction result with a pre-established map.
 * In order to achieve mapping, we draw 14 bounding boxes in the 640x320 video recording camera view. Those 14 bounding boxes positions are fixed. Each boxes would have their own coordinate. Those bounding boxes would be used to match the parking slots to see whether a car is inside the bounding boxes.
 
-![Mapping](githubpageImages/微信截图_20201217040332.png)  
+![Mapping](githubpageImages/QQ截图20201218131421.png)  
 
 * Inside the detect() function, when the algorithm detects the vehicle objects in the video. The vehicle pixel locations (x, y) are stored in the det. xyxy[] which is obtained from det object is the pixel location corresponding to each detected vehicle. Then, use these information to calculate the center point of each boxes.  
 
-![Mapping](githubpageImages/QQ截图20201218122038.png)  
+![Mapping](githubpageImages/QQ截图20201218131545.png)  
 
 * Check their center points to see if they are inside the bounding boxes. The park_nums[0-13] array is used to recording whether the parking slots are occurred.  
 
