@@ -6,7 +6,7 @@
 * [Repo](https://github.com/MenghuaXie/M202AFinalProject) 
 * [Github Page](https://menghuaxie.github.io/M202AFinalProject/)
 * [Midterm Presentation](https://www.youtube.com/watch?v=kMS5N7UKCuk&t=5s)
-* [Final Presentation]()
+* [Final Presentation](https://youtu.be/zlKFBNyhMXI)
 * [Index.md](https://github.com/MenghuaXie/M202AFinalProject/blob/gh-pages/index.md)
 * [weights](https://drive.google.com/drive/folders/1qTghqixWBGrEUCw9fJAiQDMfKWvJVWEy?usp=sharing)
 ### Project Introduction 
