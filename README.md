@@ -9,6 +9,7 @@
 * [Final Presentation](https://youtu.be/zlKFBNyhMXI)
 * [Index.md](https://github.com/MenghuaXie/M202AFinalProject/blob/gh-pages/index.md)
 * [weights](https://drive.google.com/drive/folders/1qTghqixWBGrEUCw9fJAiQDMfKWvJVWEy?usp=sharing)
+* [PPT](https://drive.google.com/file/d/1Cuk7VOV5K0AIxvW3HKbCT-7IlXZ97pAZ/view?usp=sharing)
 ### Project Introduction 
   
 #### Motivation 
